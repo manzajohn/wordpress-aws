@@ -187,6 +187,7 @@ module "elb_http" {
 }
 
 resource "aws_autoscaling_attachment" "asg_attachment_bar" {
+  depends_on = [module.auto_scaling]
   autoscaling_group_name = module.auto_scaling.this_autoscaling_group_id
   elb                    = module.elb_http.this_elb_id
 }

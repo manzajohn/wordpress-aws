@@ -25,6 +25,8 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-c
 sudo chmod +x /usr/local/bin/docker-compose
 #* link docker-compose with bin folder so it can be called globally
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+sudo groupadd -f docker-compose
 #* give it permission to work without sudo
 sudo usermod -a -G docker-compose ec2-user
 #* make folders that docker-compose.yaml needs for volumes

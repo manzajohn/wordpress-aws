@@ -1,5 +1,5 @@
 provider "aws" {
-  profile = "default"
+  profile = "manu"
   region  = "eu-west-1"
   version = "~> 3.0"
 }
