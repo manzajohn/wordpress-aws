@@ -28,6 +28,7 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 sudo groupadd -f docker-compose
 #* give it permission to work without sudo
+sudo groupadd -f docker-compose
 sudo usermod -a -G docker-compose ec2-user
 #* make folders that docker-compose.yaml needs for volumes
 sudo mkdir /efs/db /efs/wordpress
